@@ -34,10 +34,10 @@ class BookTripViewController: UIViewController {
     }
     
     var timeFormatter: DateFormatter {
-        let formatter = DateFormatter()
-        formatter.dateFormat = "h:mm a"
-        formatter.timeZone = TimeZone(secondsFromGMT: 0)
-        return formatter
+        let timeFormatter = DateFormatter()
+        timeFormatter.dateFormat = "hh:mm a"
+        //timeFormatter.timeZone = TimeZone(secondsFromGMT: 0)
+        return timeFormatter
     }
     
     // MARK: - View LifeCycle

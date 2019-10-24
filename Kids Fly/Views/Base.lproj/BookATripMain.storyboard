@@ -1321,11 +1321,8 @@
                                             <action selector="cancelButtonTapped:" destination="JCN-gz-2dP" eventType="touchUpInside" id="19m-DW-ZNO"/>
                                         </connections>
                                     </button>
-                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RLi-ZU-dFY">
+                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" translatesAutoresizingMaskIntoConstraints="NO" id="RLi-ZU-dFY">
                                         <rect key="frame" x="0.0" y="45" width="414" height="216"/>
-                                        <date key="date" timeIntervalSinceReferenceDate="561939168.50021505">
-                                            <!--2018-10-22 22:12:48 +0000-->
-                                        </date>
                                     </datePicker>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VY6-v3-3IZ">
                                         <rect key="frame" x="274" y="269" width="120" height="32"/>
@@ -1339,7 +1336,6 @@
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <action selector="SelectDateTapped:" destination="JCN-gz-2dP" eventType="touchUpInside" id="LeR-NN-2qU"/>
                                             <action selector="selectDateTapped:" destination="JCN-gz-2dP" eventType="touchUpInside" id="gw6-S2-e7T"/>
                                         </connections>
                                     </button>
@@ -1370,19 +1366,13 @@
                         </connections>
                     </view>
                     <connections>
-                        <outlet property="flightDatePicker" destination="RLi-ZU-dFY" id="RYx-Cy-1sh"/>
-                        <outlet property="modalView" destination="ZRA-l2-SJM" id="HsA-YE-cwV"/>
                         <outlet property="pickerContainerView" destination="ZRA-l2-SJM" id="fbb-HV-EXv"/>
                         <outlet property="selectDateButton" destination="VY6-v3-3IZ" id="9LO-r0-DTD"/>
                         <outlet property="timePicker" destination="RLi-ZU-dFY" id="7Dg-P9-3fL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pez-hk-QB5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="uKo-AL-Mip">
-                    <connections>
-                        <action selector="clearViewTapped:" destination="JCN-gz-2dP" id="stK-6y-kej"/>
-                    </connections>
-                </tapGestureRecognizer>
+                <tapGestureRecognizer id="uKo-AL-Mip"/>
             </objects>
             <point key="canvasLocation" x="3796" y="-609"/>
         </scene>
