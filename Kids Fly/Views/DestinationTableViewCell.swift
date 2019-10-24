@@ -32,6 +32,6 @@ class DestinationTableViewCell: UITableViewCell {
     }
     
     private func styleCell() {
-        imageContainerView.layer.cornerRadius = 10
+        imageContainerView.layer.cornerRadius = 20
     }
 }

@@ -16,11 +16,14 @@ class BookATripMainViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var userImageView: UIImageView!
     @IBOutlet weak var hiUserLabel: UILabel!
+    @IBOutlet weak var searchBar: UISearchBar!
     
     let tripController = TripController.shared
     var trip: Trip?
     var trips: [Trip]?
     let token: String? = KeychainWrapper.standard.string(forKey: "token")
+    
+    //MARK: - User
     
     var user: UserRepresentation {
         let moc = CoreDataStack.shared.mainContext
@@ -65,7 +68,7 @@ class BookATripMainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+       setupUI()
         if UserDefaults.isFirstLaunch() && token == nil {
             performSegue(withIdentifier: "ShowLoginSegue", sender: self)
         } else if token == nil {
@@ -76,16 +79,29 @@ class BookATripMainViewController: UIViewController {
         
         if token != nil {
             tripController.fetchTripsFromServer {
-
+            }
+            if let name = user.fullName {
+              hiUserLabel.text = "Hi \(name)!"
+            }else {
+                if let email = user.email {
+                    hiUserLabel.text = "Hi \(email)!"
+                }
             }
         }
     }
-    
+        
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         if token != nil {
             tripController.fetchTripsFromServer()
+            tableView.reloadData()
         }
+    }
+    
+    //MARK: - Methods
+    
+    private func setupUI() {
+        searchBar.layer.cornerRadius = 20
     }
 }
 

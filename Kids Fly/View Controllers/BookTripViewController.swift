@@ -19,6 +19,7 @@ class BookTripViewController: UIViewController {
     @IBOutlet weak var timeTextField: UITextField!
     @IBOutlet weak var flightNumberTextField: UITextField!
     @IBOutlet weak var airlineTextField: UITextField!
+    @IBOutlet weak var planTripButton: UIButton!
     
     let tripController = TripController.shared
     
@@ -36,7 +37,6 @@ class BookTripViewController: UIViewController {
     var timeFormatter: DateFormatter {
         let timeFormatter = DateFormatter()
         timeFormatter.dateFormat = "hh:mm a"
-        //timeFormatter.timeZone = TimeZone(secondsFromGMT: 0)
         return timeFormatter
     }
     
@@ -46,6 +46,7 @@ class BookTripViewController: UIViewController {
         super.viewDidLoad()
         setUpDropDowns()
         setUpTextFields()
+        setupUI()
     }
     
     // MARK: - IBActions & Methods
@@ -67,6 +68,10 @@ class BookTripViewController: UIViewController {
         numberOfTravelersTextField.delegate = self
         dateTextField.delegate = self
         timeTextField.delegate = self
+    }
+    
+    func setupUI() {
+        planTripButton.layer.cornerRadius = 10
     }
     
     @IBAction func planTripButtonTapped(_ sender: Any) {
