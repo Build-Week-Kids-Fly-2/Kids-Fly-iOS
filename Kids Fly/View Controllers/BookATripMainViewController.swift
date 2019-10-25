@@ -133,6 +133,13 @@ extension BookATripMainViewController: UITableViewDelegate, UITableViewDataSourc
         cell.destinationImageView.image = image
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            let tripToDelete = fetchedResultsController.object(at: indexPath)
+            tripController.deleteTrip(trip: tripToDelete)
+        }
+    }
 }
 
 extension BookATripMainViewController: NSFetchedResultsControllerDelegate {

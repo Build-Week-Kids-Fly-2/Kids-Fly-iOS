@@ -12,10 +12,11 @@ class EditProfileViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
+    let menuList = ["Settings", "Profile", "E-Wallet", "Contact Support", "Inbox", "View Trips"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+       
     }
     
 
@@ -29,4 +30,18 @@ class EditProfileViewController: UIViewController {
     }
     */
 
+}
+
+extension EditProfileViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return menuList.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "MenuCell", for: indexPath) as? MenuTableViewCell else { return UITableViewCell() }
+        cell.menuGroupLabel.text = menuList[indexPath.row]
+        return cell
+    }
+    
+    
 }

@@ -33,6 +33,7 @@ class Kids_FlyTests: XCTestCase {
         
         let mock = MockDataLoader()
         mock.data = validSignInData
+        // MAKE SURE USER PASSED IN HAS NOT BEEN PREVIOUSLY USED!!!
         let mockUser: UserRepresentation = UserRepresentation(email: "testymcTesterson2@test.com", password: "password", fullName: "Testy McTesterson2")
         let apiController = APIController(networkDataLoader: mock)
         var errorChecker: Bool = false
@@ -49,7 +50,6 @@ class Kids_FlyTests: XCTestCase {
     }
     
     func testLogin() {
-     
         let mock = MockDataLoader()
         mock.data = validSignInData
         let mockUser: UserRepresentation = UserRepresentation(email: "testymcTesterson2@test.com", password: "password", fullName: "Testy McTesterson2")
@@ -84,6 +84,6 @@ class Kids_FlyTests: XCTestCase {
         wait(for: [resultsExpectation], timeout: 4)
         
         XCTAssertNotNil(trips)
-        XCTAssertEqual(trips?.count, 30)
+        
     }
 }

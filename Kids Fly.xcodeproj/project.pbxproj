@@ -33,6 +33,7 @@
 		320ACB4E235F76B3003D1BE4 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320ACB4D235F76B3003D1BE4 /* SettingsViewController.swift */; };
 		320ACB50235F7704003D1BE4 /* EditProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 320ACB4F235F7704003D1BE4 /* EditProfile.storyboard */; };
 		320ACB52235F771B003D1BE4 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320ACB51235F771B003D1BE4 /* EditProfileViewController.swift */; };
+		323A513A2363671A00D460C0 /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323A51392363671A00D460C0 /* MenuTableViewCell.swift */; };
 		3272DB13235FB86E00870B28 /* DatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3272DB12235FB86E00870B28 /* DatePickerViewController.swift */; };
 		3272DB152360B16600870B28 /* User+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3272DB142360B16600870B28 /* User+Convenience.swift */; };
 		3272DB182360BD0400870B28 /* UserDefaultsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3272DB172360BD0400870B28 /* UserDefaultsHelper.swift */; };
@@ -104,6 +105,7 @@
 		320ACB4D235F76B3003D1BE4 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		320ACB4F235F7704003D1BE4 /* EditProfile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EditProfile.storyboard; sourceTree = "<group>"; };
 		320ACB51235F771B003D1BE4 /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
+		323A51392363671A00D460C0 /* MenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
 		3272DB12235FB86E00870B28 /* DatePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerViewController.swift; sourceTree = "<group>"; };
 		3272DB142360B16600870B28 /* User+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+Convenience.swift"; sourceTree = "<group>"; };
 		3272DB172360BD0400870B28 /* UserDefaultsHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsHelper.swift; sourceTree = "<group>"; };
@@ -221,6 +223,7 @@
 				05801324235FF60100BDC9A3 /* CheckingIn.storyboard */,
 				3272DB362362051900870B28 /* DestinationTableViewCell.swift */,
 				3272DB342361FCF300870B28 /* AssistantCollectionViewCell.swift */,
+				323A51392363671A00D460C0 /* MenuTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -509,6 +512,7 @@
 				3272DB2F2361942D00870B28 /* KeychainItemAccessibility.swift in Sources */,
 				320ACB40235E517A003D1BE4 /* CustomColors.swift in Sources */,
 				3272DB332361FACF00870B28 /* Assistant.swift in Sources */,
+				323A513A2363671A00D460C0 /* MenuTableViewCell.swift in Sources */,
 				3272DB352361FCF300870B28 /* AssistantCollectionViewCell.swift in Sources */,
 				3272DB562362748B00870B28 /* URLSession+NetworkDataLoader.swift in Sources */,
 				320ACB1E235E4991003D1BE4 /* AppDelegate.swift in Sources */,
