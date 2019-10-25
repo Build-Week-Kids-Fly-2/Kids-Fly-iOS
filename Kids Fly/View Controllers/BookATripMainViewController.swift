@@ -17,6 +17,8 @@ class BookATripMainViewController: UIViewController {
     @IBOutlet weak var userImageView: UIImageView!
     @IBOutlet weak var hiUserLabel: UILabel!
     @IBOutlet weak var searchBar: UISearchBar!
+    @IBOutlet weak var bookTripButton: UIButton!
+    @IBOutlet weak var checkInButtonContainerView: UIView!
     
     let tripController = TripController.shared
     var trip: Trip?
@@ -69,6 +71,29 @@ class BookATripMainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
        setupUI()
+        loginChecker()
+    }
+        
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        if token != nil {
+            tripController.fetchTripsFromServer { (_) in
+                
+            }
+            tableView.reloadData()
+        }
+    }
+    
+    //MARK: - Methods
+    
+    private func setupUI() {
+        searchBar.layer.cornerRadius = 20
+        bookTripButton.layer.cornerRadius = 5
+        checkInButtonContainerView.layer.borderWidth = 0.2
+        
+    }
+    
+    private func loginChecker() {
         if UserDefaults.isFirstLaunch() && token == nil {
             performSegue(withIdentifier: "ShowLoginSegue", sender: self)
         } else if token == nil {
@@ -89,22 +114,7 @@ class BookATripMainViewController: UIViewController {
             }
         }
     }
-        
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        if token != nil {
-            tripController.fetchTripsFromServer { (_) in
-                
-            }
-            tableView.reloadData()
-        }
-    }
     
-    //MARK: - Methods
-    
-    private func setupUI() {
-        searchBar.layer.cornerRadius = 20
-    }
 }
 
 // MARK: - Extensions
@@ -118,6 +128,9 @@ extension BookATripMainViewController: UITableViewDelegate, UITableViewDataSourc
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "DestinationCell", for: indexPath) as? DestinationTableViewCell else { return UITableViewCell() }
         let trip = fetchedResultsController.object(at: indexPath)
         cell.trip = trip
+        let randomInt = Int.random(in: 0...4)
+        let image = UIImage(named: "Vectorbackground\(randomInt)")
+        cell.destinationImageView.image = image
         return cell
     }
 }
@@ -175,4 +188,9 @@ extension BookATripMainViewController: NSFetchedResultsControllerDelegate {
     }
 }
 
+extension BookATripMainViewController: UITabBarDelegate {
+    func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
+        performSegue(withIdentifier: "ShowCheckInSegue", sender: self)
+    }
+}
 

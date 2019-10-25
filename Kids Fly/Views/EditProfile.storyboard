@@ -94,6 +94,9 @@
                         <viewLayoutGuide key="safeArea" id="dgd-xe-dAd"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" image="VectorChekInPin" id="3Ea-MH-zOh"/>
+                    <connections>
+                        <outlet property="tableView" destination="ZJK-jF-Gam" id="2ko-fK-S0L"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ktF-gf-NRA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -398,6 +401,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="loE-5a-3Wa" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="9iB-7l-3Hs">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>

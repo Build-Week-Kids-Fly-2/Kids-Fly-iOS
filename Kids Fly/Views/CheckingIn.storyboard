@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Jqp-aw-d2j">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -71,22 +71,26 @@
                                 <state key="normal" title="CHECK IN">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
+                                <connections>
+                                    <segue destination="cpm-hO-DAY" kind="presentation" id="jre-ni-a9a"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="D2N-GF-dNu"/>
                     </view>
+                    <navigationItem key="navigationItem" id="Za1-56-e55"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wgR-FF-i2H" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-840.57971014492762" y="611.38392857142856"/>
+            <point key="canvasLocation" x="69.565217391304358" y="611.38392857142856"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="nd8-A7-Gvo">
             <objects>
                 <viewController id="cpm-hO-DAY" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2c5-MO-WUG">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Mu7-V2-hQb">
@@ -120,10 +124,11 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="jST-hG-MrO"/>
                     </view>
+                    <navigationItem key="navigationItem" id="blM-Bw-I7m"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Efi-V9-anP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="121.73913043478262" y="610.71428571428567"/>
+            <point key="canvasLocation" x="1031.8840579710145" y="610.71428571428567"/>
         </scene>
     </scenes>
     <resources>

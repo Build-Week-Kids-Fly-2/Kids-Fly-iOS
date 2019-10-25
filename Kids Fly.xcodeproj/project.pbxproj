@@ -26,7 +26,6 @@
 		320ACB3E235E4B7D003D1BE4 /* Lato-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 320ACB3D235E4B7D003D1BE4 /* Lato-Bold.ttf */; };
 		320ACB40235E517A003D1BE4 /* CustomColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320ACB3F235E517A003D1BE4 /* CustomColors.swift */; };
 		320ACB42235E5503003D1BE4 /* BookATripMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320ACB41235E5503003D1BE4 /* BookATripMainViewController.swift */; };
-		320ACB44235E5C4C003D1BE4 /* DestinationCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320ACB43235E5C4C003D1BE4 /* DestinationCollectionViewCell.swift */; };
 		320ACB46235E61CF003D1BE4 /* BookTripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320ACB45235E61CF003D1BE4 /* BookTripViewController.swift */; };
 		320ACB48235F625B003D1BE4 /* HireViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320ACB47235F625B003D1BE4 /* HireViewController.swift */; };
 		320ACB4A235F6C76003D1BE4 /* ReviewTripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320ACB49235F6C76003D1BE4 /* ReviewTripViewController.swift */; };
@@ -51,6 +50,7 @@
 		3272DB552362748400870B28 /* NetworkDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3272DB4F2362707A00870B28 /* NetworkDataLoader.swift */; };
 		3272DB562362748B00870B28 /* URLSession+NetworkDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3272DB512362711600870B28 /* URLSession+NetworkDataLoader.swift */; };
 		3272DB5823627A1500870B28 /* MockSignUpData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3272DB5723627A1500870B28 /* MockSignUpData.swift */; };
+		3272DB5A236346B300870B28 /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3272DB59236346B300870B28 /* Cache.swift */; };
 		32E6743D235F98270081D236 /* FamilyPassportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32E6743C235F98270081D236 /* FamilyPassportViewController.swift */; };
 		32E6743F235F98500081D236 /* AddFamilyMemberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32E6743E235F98500081D236 /* AddFamilyMemberViewController.swift */; };
 		92F75F13E0F0D24C1BDCAA91 /* Pods_Kids_Fly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18D72BDA8F67CA58D1C1EB68 /* Pods_Kids_Fly.framework */; };
@@ -97,7 +97,6 @@
 		320ACB3D235E4B7D003D1BE4 /* Lato-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Bold.ttf"; sourceTree = "<group>"; };
 		320ACB3F235E517A003D1BE4 /* CustomColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomColors.swift; sourceTree = "<group>"; };
 		320ACB41235E5503003D1BE4 /* BookATripMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookATripMainViewController.swift; sourceTree = "<group>"; };
-		320ACB43235E5C4C003D1BE4 /* DestinationCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestinationCollectionViewCell.swift; sourceTree = "<group>"; };
 		320ACB45235E61CF003D1BE4 /* BookTripViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookTripViewController.swift; sourceTree = "<group>"; };
 		320ACB47235F625B003D1BE4 /* HireViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HireViewController.swift; sourceTree = "<group>"; };
 		320ACB49235F6C76003D1BE4 /* ReviewTripViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewTripViewController.swift; sourceTree = "<group>"; };
@@ -129,6 +128,7 @@
 		3272DB512362711600870B28 /* URLSession+NetworkDataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSession+NetworkDataLoader.swift"; sourceTree = "<group>"; };
 		3272DB53236271CA00870B28 /* MockResultData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockResultData.swift; sourceTree = "<group>"; };
 		3272DB5723627A1500870B28 /* MockSignUpData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSignUpData.swift; sourceTree = "<group>"; };
+		3272DB59236346B300870B28 /* Cache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cache.swift; sourceTree = "<group>"; };
 		32E6743C235F98270081D236 /* FamilyPassportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyPassportViewController.swift; sourceTree = "<group>"; };
 		32E6743E235F98500081D236 /* AddFamilyMemberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFamilyMemberViewController.swift; sourceTree = "<group>"; };
 		6DCA0B05BF7883B92D2E4BD3 /* Pods-Kids Fly.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kids Fly.debug.xcconfig"; path = "Target Support Files/Pods-Kids Fly/Pods-Kids Fly.debug.xcconfig"; sourceTree = "<group>"; };
@@ -220,7 +220,6 @@
 				320ACB4F235F7704003D1BE4 /* EditProfile.storyboard */,
 				05801324235FF60100BDC9A3 /* CheckingIn.storyboard */,
 				3272DB362362051900870B28 /* DestinationTableViewCell.swift */,
-				320ACB43235E5C4C003D1BE4 /* DestinationCollectionViewCell.swift */,
 				3272DB342361FCF300870B28 /* AssistantCollectionViewCell.swift */,
 			);
 			path = Views;
@@ -254,6 +253,7 @@
 				05801320235FA53B00BDC9A3 /* Trip+Convenience.swift */,
 				05801322235FAC3100BDC9A3 /* TripRepresentation.swift */,
 				3272DB322361FACF00870B28 /* Assistant.swift */,
+				3272DB59236346B300870B28 /* Cache.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -508,7 +508,6 @@
 				0580131F235FA3F600BDC9A3 /* Trips.xcdatamodeld in Sources */,
 				3272DB2F2361942D00870B28 /* KeychainItemAccessibility.swift in Sources */,
 				320ACB40235E517A003D1BE4 /* CustomColors.swift in Sources */,
-				320ACB44235E5C4C003D1BE4 /* DestinationCollectionViewCell.swift in Sources */,
 				3272DB332361FACF00870B28 /* Assistant.swift in Sources */,
 				3272DB352361FCF300870B28 /* AssistantCollectionViewCell.swift in Sources */,
 				3272DB562362748B00870B28 /* URLSession+NetworkDataLoader.swift in Sources */,
@@ -525,6 +524,7 @@
 				3272DB2823611EBA00870B28 /* TripController.swift in Sources */,
 				320ACB4A235F6C76003D1BE4 /* ReviewTripViewController.swift in Sources */,
 				320ACB4E235F76B3003D1BE4 /* SettingsViewController.swift in Sources */,
+				3272DB5A236346B300870B28 /* Cache.swift in Sources */,
 				3272DB182360BD0400870B28 /* UserDefaultsHelper.swift in Sources */,
 				320ACB20235E4991003D1BE4 /* SceneDelegate.swift in Sources */,
 				3272DB3923623D8C00870B28 /* TimePickerViewController.swift in Sources */,

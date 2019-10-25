@@ -20,6 +20,7 @@ class BookTripViewController: UIViewController {
     @IBOutlet weak var flightNumberTextField: UITextField!
     @IBOutlet weak var airlineTextField: UITextField!
     @IBOutlet weak var planTripButton: UIButton!
+    @IBOutlet weak var checkInButtonContainerView: UIView!
     
     let tripController = TripController.shared
     
@@ -72,6 +73,7 @@ class BookTripViewController: UIViewController {
     
     func setupUI() {
         planTripButton.layer.cornerRadius = 10
+        checkInButtonContainerView.layer.borderWidth = 0.2
     }
     
     @IBAction func planTripButtonTapped(_ sender: Any) {
@@ -112,7 +114,7 @@ class BookTripViewController: UIViewController {
             createNewTrip()
             guard let hireVC = segue.destination as? HireViewController else { return }
             hireVC.trip = trip
-            print("\(trip?.airline)")
+            print("\(trip?.airline) from bookTripViewController")
         }
     }
 }

@@ -15,6 +15,8 @@ class HireViewController: UIViewController {
     @IBOutlet weak var languageLabel: UILabel!
     @IBOutlet weak var abilitiesLabel: UILabel!
     @IBOutlet weak var jobsCompletedLabel: UILabel!
+    @IBOutlet weak var hireButton: UIButton!
+    @IBOutlet weak var checkInButtonContainerView: UIView!
     
     var trip: Trip?
     
@@ -27,6 +29,7 @@ class HireViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         initialAssistant()
+        setupUI()
     }
     
 
@@ -39,7 +42,7 @@ class HireViewController: UIViewController {
             guard let reviewVC = segue.destination as? ReviewTripViewController,
                 let indexPath = collectionView.indexPathsForSelectedItems?.first else { return }
             reviewVC.trip = self.trip
-            print("\(trip?.airport)")
+            print("\(trip?.airport) from hireViewController")
             reviewVC.assistant = assistants[indexPath.item]
         }
     }
@@ -60,6 +63,11 @@ class HireViewController: UIViewController {
         }
         abilitiesLabel.text = abilities
         jobsCompletedLabel.text = "\(assistant.jobComplete) jobs completed"
+    }
+    
+    private func setupUI() {
+        hireButton.layer.cornerRadius = 10
+        checkInButtonContainerView.layer.borderWidth = 0.2
     }
     
 }

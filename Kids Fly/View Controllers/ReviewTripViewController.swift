@@ -14,6 +14,7 @@ class ReviewTripViewController: UIViewController {
     
     var trip: Trip? {
         didSet {
+            print("\(trip?.airline) from reviewViewController")
             updateViews()
         }
     }
@@ -28,10 +29,12 @@ class ReviewTripViewController: UIViewController {
     @IBOutlet weak var departureTimeLabel: UILabel!
     @IBOutlet weak var numberOfTravelersLabel: UILabel!
     @IBOutlet weak var flightNumberLabel: UILabel!
+    @IBOutlet weak var confirmButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         updateViews()
+        setupUI()
     }
     
     @IBAction func editButtonTapped(_ sender: Any) {
@@ -62,5 +65,9 @@ class ReviewTripViewController: UIViewController {
         departureDateLabel.text = trip.departureTime
         numberOfTravelersLabel.text = "\(trip.children) Passengers"
         flightNumberLabel.text = trip.flightNumber
+    }
+    
+    private func setupUI() {
+        confirmButton.layer.cornerRadius = 10
     }
 }
