@@ -34,6 +34,12 @@ class APIController {
     var user: UserRepresentation?
     var token: String?
     
+    let networkDataLoader: NetworkDataLoader
+    
+    init(networkDataLoader: NetworkDataLoader = URLSession.shared) {
+        self.networkDataLoader = networkDataLoader
+    }
+    
     //MARK: - Sign Up
     
     func signUp(with user: UserRepresentation, completion: @escaping (NetworkError?) -> Void) {

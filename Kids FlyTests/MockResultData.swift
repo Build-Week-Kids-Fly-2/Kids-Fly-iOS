@@ -11,7 +11,7 @@ import Foundation
 let validTripJSON = """
 [
   {
-    "id": 11,
+    "id": 1,
     "airport": "DFW",
     "airline": "Spirit",
     "flightNumber": "DAL200",
@@ -23,7 +23,7 @@ let validTripJSON = """
     "en_route": false
   },
   {
-    "id": 14,
+    "id": 2,
     "airport": "DFW",
     "airline": "Southwest",
     "flightNumber": "DAL200",
@@ -35,7 +35,7 @@ let validTripJSON = """
     "en_route": false
   },
   {
-    "id": 19,
+    "id": 3,
     "airport": "LAX: Los Angeles International Airport",
     "airline": "Southwest",
     "flightNumber": "SW1996",
@@ -47,7 +47,7 @@ let validTripJSON = """
     "en_route": false
   },
   {
-    "id": 20,
+    "id": 4,
     "airport": "ATL: Atlanta International Airport",
     "airline": "American",
     "flightNumber": "AA2034",
@@ -59,7 +59,7 @@ let validTripJSON = """
     "en_route": false
   },
   {
-    "id": 21,
+    "id": 5,
     "airport": " Denver International Airport",
     "airline": "American",
     "flightNumber": "AA0000",
@@ -71,7 +71,7 @@ let validTripJSON = """
     "en_route": false
   },
   {
-    "id": 22,
+    "id": 6,
     "airport": " Dallas/Fort Worth International Airport",
     "airline": "American",
     "flightNumber": "AA1111",
@@ -83,7 +83,7 @@ let validTripJSON = """
     "en_route": false
   },
   {
-    "id": 23,
+    "id": 7,
     "airport": "JFKs",
     "airline": "Alaskan",
     "flightNumber": "KF202",
@@ -95,7 +95,7 @@ let validTripJSON = """
     "en_route": false
   },
   {
-    "id": 24,
+    "id": 8,
     "airport": "JFKs",
     "airline": "Alaskan",
     "flightNumber": "KF202",
@@ -107,7 +107,7 @@ let validTripJSON = """
     "en_route": false
   },
   {
-    "id": 25,
+    "id": 9,
     "airport": "JFKs",
     "airline": "Alaskan",
     "flightNumber": "KF202",
@@ -119,208 +119,16 @@ let validTripJSON = """
     "en_route": false
   },
   {
-    "id": 26,
+    "id": 10,
     "airport": " Dallas/Fort Worth International Airport",
     "airline": "American",
     "flightNumber": "AA1111",
     "departureTime": "31 October, 2019 at 11:40AM",
     "carryOnBags": 0,
-    "checkedBags": 0,
-    "children": 3,
-    "arrived": false,
-    "en_route": false
-  },
-  {
-    "id": 27,
-    "airport": "JFKs",
-    "airline": "Alaskan",
-    "flightNumber": "KF202",
-    "departureTime": "14:02",
-    "carryOnBags": 0,
-    "checkedBags": 0,
-    "children": 3,
-    "arrived": false,
-    "en_route": false
-  },
-  {
-    "id": 28,
-    "airport": "JFKs",
-    "airline": "Alaskan",
-    "flightNumber": "KF202",
-    "departureTime": "14:02",
-    "carryOnBags": 0,
-    "checkedBags": 0,
-    "children": 3,
-    "arrived": false,
-    "en_route": false
-  },
-  {
-    "id": 29,
-    "airport": " Dallas/Fort Worth International Airport",
-    "airline": "Delta",
-    "flightNumber": "DT3344",
-    "departureTime": "24 October, 2019 at ",
-    "carryOnBags": 0,
-    "checkedBags": 0,
-    "children": 3,
-    "arrived": false,
-    "en_route": false
-  },
-  {
-    "id": 30,
-    "airport": "JFKs",
-    "airline": "Alaskan",
-    "flightNumber": "KF202",
-    "departureTime": "14:02",
-    "carryOnBags": 3,
-    "checkedBags": 0,
-    "children": 3,
-    "arrived": false,
-    "en_route": false
-  },
-  {
-    "id": 31,
-    "airport": "JFKs",
-    "airline": "Alaskan",
-    "flightNumber": "KF202",
-    "departureTime": "14:00",
-    "carryOnBags": 3,
-    "checkedBags": 0,
-    "children": 3,
-    "arrived": false,
-    "en_route": false
-  },
-  {
-    "id": 32,
-    "airport": "JFKs",
-    "airline": "Alaskan",
-    "flightNumber": "KF202",
-    "departureTime": "14:02",
-    "carryOnBags": 3,
-    "checkedBags": 0,
-    "children": 3,
-    "arrived": false,
-    "en_route": false
-  },
-  {
-    "id": 33,
-    "airport": "JFKs",
-    "airline": "Alaskan",
-    "flightNumber": "KF202",
-    "departureTime": "14:02",
-    "carryOnBags": 3,
-    "checkedBags": 0,
-    "children": 3,
-    "arrived": false,
-    "en_route": false
-  },
-  {
-    "id": 34,
-    "airport": "JFKs",
-    "airline": "Alaskan",
-    "flightNumber": "KF202",
-    "departureTime": "14:02",
-    "carryOnBags": 3,
-    "checkedBags": 0,
-    "children": 3,
-    "arrived": false,
-    "en_route": false
-  },
-  {
-    "id": 35,
-    "airport": "AKL9",
-    "airline": "Alaskan",
-    "flightNumber": "KF202",
-    "departureTime": "14:02",
-    "carryOnBags": 3,
-    "checkedBags": 0,
-    "children": 3,
-    "arrived": false,
-    "en_route": false
-  },
-  {
-    "id": 36,
-    "airport": "AKL9",
-    "airline": "Alaskan",
-    "flightNumber": "KF202",
-    "departureTime": "14:02",
-    "carryOnBags": 3,
-    "checkedBags": 0,
-    "children": 3,
-    "arrived": false,
-    "en_route": false
-  },
-  {
-    "id": 37,
-    "airport": "123",
-    "airline": "Alaskan",
-    "flightNumber": "KF202",
-    "departureTime": "14:02",
-    "carryOnBags": 3,
-    "checkedBags": 0,
-    "children": 3,
-    "arrived": false,
-    "en_route": false
-  },
-  {
-    "id": 38,
-    "airport": "AKL9",
-    "airline": "Alaskan",
-    "flightNumber": "KF202",
-    "departureTime": "14:02",
-    "carryOnBags": 3,
-    "checkedBags": 0,
-    "children": 3,
-    "arrived": false,
-    "en_route": false
-  },
-  {
-    "id": 39,
-    "airport": "JFKs",
-    "airline": "Alaskan",
-    "flightNumber": "KF202",
-    "departureTime": "14:02",
-    "carryOnBags": 3,
-    "checkedBags": 0,
-    "children": 3,
-    "arrived": false,
-    "en_route": false
-  },
-  {
-    "id": 40,
-    "airport": "JFKs",
-    "airline": "Alaskan",
-    "flightNumber": "KF202",
-    "departureTime": "14:02",
-    "carryOnBags": 3,
-    "checkedBags": 0,
-    "children": 3,
-    "arrived": false,
-    "en_route": false
-  },
-  {
-    "id": 41,
-    "airport": "JFKs",
-    "airline": "Alaskan",
-    "flightNumber": "KF202",
-    "departureTime": "14:02",
-    "carryOnBags": 3,
-    "checkedBags": 0,
-    "children": 3,
-    "arrived": false,
-    "en_route": false
-  },
-  {
-    "id": 42,
-    "airport": "JFKs",
-    "airline": "Alaskan",
-    "flightNumber": "KF202",
-    "departureTime": "14:02",
-    "carryOnBags": 3,
     "checkedBags": 0,
     "children": 3,
     "arrived": false,
     "en_route": false
   }
 ]
-"""
+""".data(using: .utf8)!

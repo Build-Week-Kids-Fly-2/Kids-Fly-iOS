@@ -78,7 +78,7 @@ class BookATripMainViewController: UIViewController {
         }
         
         if token != nil {
-            tripController.fetchTripsFromServer {
+            tripController.fetchTripsFromServer {_ in
             }
             if let name = user.fullName {
               hiUserLabel.text = "Hi \(name)!"
@@ -93,7 +93,9 @@ class BookATripMainViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         if token != nil {
-            tripController.fetchTripsFromServer()
+            tripController.fetchTripsFromServer { (_) in
+                
+            }
             tableView.reloadData()
         }
     }

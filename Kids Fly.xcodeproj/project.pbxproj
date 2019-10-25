@@ -47,9 +47,10 @@
 		3272DB3923623D8C00870B28 /* TimePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3272DB3823623D8C00870B28 /* TimePickerViewController.swift */; };
 		3272DB4623626E7D00870B28 /* Kids_FlyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3272DB4523626E7D00870B28 /* Kids_FlyTests.swift */; };
 		3272DB4E2362702B00870B28 /* MockDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3272DB4D2362702B00870B28 /* MockDataLoader.swift */; };
-		3272DB502362707A00870B28 /* NetworkDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3272DB4F2362707A00870B28 /* NetworkDataLoader.swift */; };
-		3272DB522362711600870B28 /* URLSession+NetworkDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3272DB512362711600870B28 /* URLSession+NetworkDataLoader.swift */; };
 		3272DB54236271CA00870B28 /* MockResultData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3272DB53236271CA00870B28 /* MockResultData.swift */; };
+		3272DB552362748400870B28 /* NetworkDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3272DB4F2362707A00870B28 /* NetworkDataLoader.swift */; };
+		3272DB562362748B00870B28 /* URLSession+NetworkDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3272DB512362711600870B28 /* URLSession+NetworkDataLoader.swift */; };
+		3272DB5823627A1500870B28 /* MockSignUpData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3272DB5723627A1500870B28 /* MockSignUpData.swift */; };
 		32E6743D235F98270081D236 /* FamilyPassportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32E6743C235F98270081D236 /* FamilyPassportViewController.swift */; };
 		32E6743F235F98500081D236 /* AddFamilyMemberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32E6743E235F98500081D236 /* AddFamilyMemberViewController.swift */; };
 		92F75F13E0F0D24C1BDCAA91 /* Pods_Kids_Fly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18D72BDA8F67CA58D1C1EB68 /* Pods_Kids_Fly.framework */; };
@@ -127,6 +128,7 @@
 		3272DB4F2362707A00870B28 /* NetworkDataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDataLoader.swift; sourceTree = "<group>"; };
 		3272DB512362711600870B28 /* URLSession+NetworkDataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSession+NetworkDataLoader.swift"; sourceTree = "<group>"; };
 		3272DB53236271CA00870B28 /* MockResultData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockResultData.swift; sourceTree = "<group>"; };
+		3272DB5723627A1500870B28 /* MockSignUpData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSignUpData.swift; sourceTree = "<group>"; };
 		32E6743C235F98270081D236 /* FamilyPassportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyPassportViewController.swift; sourceTree = "<group>"; };
 		32E6743E235F98500081D236 /* AddFamilyMemberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFamilyMemberViewController.swift; sourceTree = "<group>"; };
 		6DCA0B05BF7883B92D2E4BD3 /* Pods-Kids Fly.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kids Fly.debug.xcconfig"; path = "Target Support Files/Pods-Kids Fly/Pods-Kids Fly.debug.xcconfig"; sourceTree = "<group>"; };
@@ -271,6 +273,8 @@
 				3272DB172360BD0400870B28 /* UserDefaultsHelper.swift */,
 				3272DB2E2361942D00870B28 /* KeychainItemAccessibility.swift */,
 				3272DB302361944C00870B28 /* KeychainWrapper.swift */,
+				3272DB4F2362707A00870B28 /* NetworkDataLoader.swift */,
+				3272DB512362711600870B28 /* URLSession+NetworkDataLoader.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -290,9 +294,8 @@
 				3272DB4523626E7D00870B28 /* Kids_FlyTests.swift */,
 				3272DB4D2362702B00870B28 /* MockDataLoader.swift */,
 				3272DB4723626E7D00870B28 /* Info.plist */,
-				3272DB4F2362707A00870B28 /* NetworkDataLoader.swift */,
-				3272DB512362711600870B28 /* URLSession+NetworkDataLoader.swift */,
 				3272DB53236271CA00870B28 /* MockResultData.swift */,
+				3272DB5723627A1500870B28 /* MockSignUpData.swift */,
 			);
 			path = "Kids FlyTests";
 			sourceTree = "<group>";
@@ -501,12 +504,14 @@
 				32E6743F235F98500081D236 /* AddFamilyMemberViewController.swift in Sources */,
 				0580130E235E6CAE00BDC9A3 /* UserRepresentation.swift in Sources */,
 				3272DB312361944C00870B28 /* KeychainWrapper.swift in Sources */,
+				3272DB552362748400870B28 /* NetworkDataLoader.swift in Sources */,
 				0580131F235FA3F600BDC9A3 /* Trips.xcdatamodeld in Sources */,
 				3272DB2F2361942D00870B28 /* KeychainItemAccessibility.swift in Sources */,
 				320ACB40235E517A003D1BE4 /* CustomColors.swift in Sources */,
 				320ACB44235E5C4C003D1BE4 /* DestinationCollectionViewCell.swift in Sources */,
 				3272DB332361FACF00870B28 /* Assistant.swift in Sources */,
 				3272DB352361FCF300870B28 /* AssistantCollectionViewCell.swift in Sources */,
+				3272DB562362748B00870B28 /* URLSession+NetworkDataLoader.swift in Sources */,
 				320ACB1E235E4991003D1BE4 /* AppDelegate.swift in Sources */,
 				3272DB152360B16600870B28 /* User+Convenience.swift in Sources */,
 				05801310235E6CF000BDC9A3 /* SignInViewController.swift in Sources */,
@@ -541,10 +546,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				3272DB4E2362702B00870B28 /* MockDataLoader.swift in Sources */,
+				3272DB5823627A1500870B28 /* MockSignUpData.swift in Sources */,
 				3272DB4623626E7D00870B28 /* Kids_FlyTests.swift in Sources */,
 				3272DB54236271CA00870B28 /* MockResultData.swift in Sources */,
-				3272DB522362711600870B28 /* URLSession+NetworkDataLoader.swift in Sources */,
-				3272DB502362707A00870B28 /* NetworkDataLoader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

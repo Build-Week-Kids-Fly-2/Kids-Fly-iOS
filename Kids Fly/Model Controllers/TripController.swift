@@ -15,6 +15,11 @@ class TripController {
     
     static let shared = TripController()
     let baseURL = URL(string: "https://evening-island-60784.herokuapp.com/api")!
+    let networkDataLoader: NetworkDataLoader
+    
+    init(networkDataLoader: NetworkDataLoader = URLSession.shared) {
+        self.networkDataLoader = networkDataLoader
+    }
     
     //MARK: - Create Trip
     
@@ -65,7 +70,7 @@ class TripController {
     
     //MARK: - Fetch Trip From Server
     
-    func fetchTripsFromServer(completion: @escaping () -> Void = {}) {
+    func fetchTripsFromServer(completion: @escaping ([TripRepresentation]?) -> Void) {
         let token: String? = KeychainWrapper.standard.string(forKey: "token")
         
         let requestURL = baseURL.appendingPathComponent("user_trips")
@@ -75,13 +80,13 @@ class TripController {
         if let token = token {
             request.setValue("\(token)", forHTTPHeaderField: "Authorization")
         } else {
-            completion()
+            completion(nil)
         }
         
         URLSession.shared.dataTask(with: request) { (data, response, error) in
             if let response = response as? HTTPURLResponse, response.statusCode != 200 {
                 NSLog("Bad response fetching trips with response code:\(response.statusCode)")
-                completion()
+                completion(nil)
                 return
             }
             
@@ -91,19 +96,19 @@ class TripController {
             
             guard let data = data else {
                 NSLog("No data returned from fetching trips from server:\(error)")
-                completion()
+                completion(nil)
                 return
             }
             
             do{
                 let decoer = JSONDecoder()
                 let tripRepresentations = try decoer.decode([TripRepresentation].self, from: data)
-                completion()
+                completion(tripRepresentations)
                 self.updateTrips(with: tripRepresentations)
                 try CoreDataStack.shared.save()
             } catch {
                 NSLog("Error decoding trip representations:\(error)")
-                completion()
+                completion(nil)
                 return
             }
         }.resume()
